@@ -1,52 +1,10 @@
-# opencart-twig-Autoloader.php
-opencart-twig-autoloader.php
+Autoloader.php
+
+* replace your autoloader.php file in opencart if you are planning to use the following
+# old themes that only works in 7.3 or 7.4
+* if you are planning to upgrade your php version to PHP8 and you dont want to have any issue on the said theme
 
 
-<?php
-
-/*
- * This file is part of Twig.
- *
- * (c) 2022 Benie Vison
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
-/**
- * Autoloads Twig classes.
- *
- * @author Benie Vison<g.dev/benievison>
- */
-class Twig_Autoloader
-{
-    /**
-     * Registers Twig_Autoloader as an SPL autoloader.
-     *
-     * @param bool    $prepend Whether to prepend the autoloader or not.
-     */
-    public static function register($prepend = false)
-    {
-        if (version_compare(phpversion(), '8.1.0', '>=')) {
-            spl_autoload_register(array(__CLASS__, 'autoload'), true, $prepend);
-        } else {
-            spl_autoload_register(array(__CLASS__, 'autoload'));
-        }
-    }
-
-    /**
-     * Handles autoloading of classes.
-     *
-     * @param string $class A class name.
-     */
-    public static function autoload($class)
-    {
-        if (0 !== strpos($class, 'Twig')) {
-            return;
-        }
-
-        if (is_file($file = dirname(__FILE__).'/../'.str_replace(array('_', "\0"), array('/', ''), $class).'.php')) {
-            require $file;
-        }
-    }
-}
+#   Autoloader is compatible on old themes
+#   If you are using the latest version of opencart, and still want to use the old themes. go for this
+#   Old themes using this autoloader are compatible on PHP8.0
