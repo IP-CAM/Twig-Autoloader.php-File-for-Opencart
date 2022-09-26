@@ -1,10 +1,10 @@
 Autoloader.php
 
-* replace your autoloader.php file in opencart if you are planning to use the following
-# old themes that only works in 7.3 or 7.4
-* if you are planning to upgrade your php version to PHP8 and you dont want to have any issue on the said theme
+Use this autoloader if your status is applicable on the following below
 
+IF YOU ARE USING AN OLD THEMES WHICH IS COMPATIBLE ONLY IN 7.4 AND WANT TO UPGRADE TO PHP 8
+IF YOU ARE USING FABIANNE SYMPHONY / OR SHOPKING THEMES AND WANT TO UPGRADE TO PHP 8.0 
 
-#   Autoloader is compatible on old themes
-#   If you are using the latest version of opencart, and still want to use the old themes. go for this
-#   Old themes using this autoloader are compatible on PHP8.0
+// IF YOU ALREADY CONFIGURE YOUR THEMES BECAUSE OF THE PREVIOUS ERROR, DONT APPLY THIS AUTOLOADER.
+// USE MY BENTHEME4.OCMOD TO FIX ALL THE ARGUMENT AND PARSE ERROR IN YOUR THEME, THEN APPLY TH AUTOLOADER ONCE YOU DECIDED TO GO PHP8
+
